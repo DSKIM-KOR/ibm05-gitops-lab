@@ -5,20 +5,20 @@ metadata:
   namespace: bgd
   labels:
     app: bgd
-  spec:
-    replicas: 3
-    selector:
-      matchLabels:
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bgd
+  template:
+    metadata:
+      labels:
         app: bgd
-    template:
-      metadata:
-        labels:
-          app: bgd
-        creationTimestamp: null
-      spec:
-        container:
-        - name: bgd
-          image: quay.io/rhdevelopers/bgd:1.0.0
-          env:
-          - name: COLOR
-            value: "red"
+      creationTimestamp: null
+    spec:
+      containers:
+      - name: bgd
+        image: quay.io/rhdevelopers/bgd:1.0.0
+        env:
+        - name: COLOR
+          value: "red"
