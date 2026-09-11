@@ -10,4 +10,4 @@ resources:
 images:
 - name: dongseonkim/hello-app
   newName: dongseonkim/hello-app
-  newTag: 0657a8b
+  newTag: 5eb1cb0
